@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>StoryBoard</title>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Button trigger modal -->
+<!-- <button  class="btn btn-primary btn-lg buttontext" id="publishbutto" data-toggle="modal" data-target="#myModal">
+  Publish!
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title buttontext" id="myModalLabel">Game Over</h4>
+     	 </div>
+      	<div class="modal-body buttontext">
+        Ready to Publish your Story?
+      	</div>
+     	 <div class="modal-footer">
+      <!--   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary" id="publish-small">Publish!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid background"> -->
+	
+	<h2>Keep Calm and Write On.</h2>
+
+	<nav>
+<!-- 	<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Keep Calm and Write On was developed by Shilpa Kumar. Visit her website to learn more. http://shilpakumar.com">
+  about
+</button>
+<br> <br>
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Keep Calm. Take a breather. THEN WRITE. Build a story with a pal, taking turns to write as much as you can in 30 seconds or less. Prompts provided if needed. Get creative and write on!">
+  rules
+</button> -->
+		<ul>
+			<li>about</li>
+			<li>rules</li>
+		</ul>
+	</nav>
+
+
+	
+		<button  class="btn btn-primary btn-lg buttontext" id="publishbutton" data-toggle="modal" data-target="#myModal">
+  Publish!
+</button>
+
+	<div class="container">
+
+		<span id="timer"></span>
+
+		<ul class="game-board">
+
+		</ul>
+
+		<p class="direction" id="turn1"></p>
+
+	</div>
+		
+		<p class = "allDone"></p>
+
+<div id="footer">
+	<form action ="javascript:void(0);" id="form-one">
+		
+		<div id="initial-input">
+		<input id="playerInput" type="text" placeholder="Write here..." autocomplete="off" autofocus>
+		</div>
+
+		<br><br>
+
+		<input id="post-button" type="submit" value="Post">
+
+	</form>	
+
+
+</div>
+	
+<!-- </div> -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

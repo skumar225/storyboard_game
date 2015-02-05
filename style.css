@@ -1,0 +1,158 @@
+* {
+		font-family: Georgia, Helvetica, Arial, sans-serif;
+}
+
+body {
+	background-image: url("newnotepad.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	z-index: -10;
+
+}
+h2 {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	margin: 4% 20%;
+	text-align: center;
+}
+
+nav {
+	font-family: 'Playfair Display', serif;
+	color: #FBEFF2;
+	text-align: center;
+	position: absolute;
+	
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+
+form {
+	text-align: center;
+}
+
+.container {
+	max-width: 790px;
+	width: 100%;
+	font-family: Times,Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 1.25em;
+
+}
+
+.game-board {
+	list-style: none;
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+}
+
+
+form input {
+	
+
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	text-align: center;
+
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#form-one {
+    margin: 0 auto;
+}
+
+#playerInput {
+	
+	font-size: 1.5em;	
+	width: 50%;
+}
+
+#post-button {
+	padding: 1%;
+	font-size: 2em;
+	width: 25%;
+}
+
+input[type="submit"]:hover{
+    border: 1px solid #999; 
+    color:#F7819F;
+}
+
+
+/* jQuery Appended Styles */
+
+.greeting {
+
+	color: gray;
+	font-size: 1.5em;
+
+}
+
+.allDone{
+	text-align: center;
+}
+
+.turnPink {
+	color: #FA5882;
+}
+
+#timer {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	color: red;
+	font-size: 18px;
+}
+
+.direction {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: gray;
+	opacity: .9;
+	font-size: 25px;
+}
+
+#publishbutton {
+	margin: 10% 45%;
+}
+
+.buttontext {
+	text-align: center;
+	
+}
+
+.plaaygainclass {
+	font-family: Georgia, Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding: 1%;
+
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
