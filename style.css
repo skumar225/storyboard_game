@@ -11,10 +11,18 @@ body {
 	z-index: -10;
 
 }
-h2 {
+
+h2, h3 {
 	font-family: Georgia, Helvetica, Arial, sans-serif;
 	margin: 4% 20%;
 	text-align: center;
+}
+
+#about-popover, #rules-popover {
+
+	margin: 50%;
+	font-size: 15px;
+
 }
 
 nav {
@@ -106,6 +114,10 @@ input[type="submit"]:hover{
 
 }
 
+.writing {
+	text-align: center;
+}
+
 .allDone{
 	text-align: center;
 }
@@ -137,7 +149,10 @@ input[type="submit"]:hover{
 	
 }
 
-.plaaygainclass {
+.plaaygainclass, .save-story {
+	
+	margin: 8%;
+
 	font-family: Georgia, Helvetica, Arial, sans-serif;
 	text-align: center;
 	padding: 1%;

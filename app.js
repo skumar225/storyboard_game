@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 //WHEN GAME IS OVER:
 	var playAgain = $("<button class='plaaygainclass'>Play Again?</button>"); //Play Again reset button
+	var saveStory = $("<button class='save-story'>Save Your Story</button>"); //Save Your Story option button
 
 	$("#publishbutton").hide();  //Hide Publish button while game is in play
 
@@ -24,14 +25,39 @@ $(document).ready(function() {
 			$(".container").on("click", ".plaaygainclass", function() {
 				location.reload(true);  //Reset page on button click
 			});
+
+
+			//SAVING STORIES TO LOCAL STORAGE
+			$(".container").append(saveStory); //Add Save Your Story button
+			$(".container").on("click", ".save-story", function () {			
+					var newStory = $(".writing").text(); 			// Obtain all players' text
+					var allStories = []; 										//Empty array for storying new stories
+					var savedStories = localStorage.getItem("allMyStories"); 	//Taking currently saved stories
+					if (savedStories !== null) {  														
+						allStories = JSON.parse(savedStories);									//Turn the starting empty array into current array of existing stories
+					}
+					allStories.push(newStory);  //Add players' text to array
+					localStorage.setItem("allMyStories", JSON.stringify(allStories));  //Stringify array items to store to local storage
+					
+					//array-a-fy items
+					var savedStoryArr = JSON.parse(localStorage.getItem("allMyStories"));
+
+					//append to html doc FIXXXXXX THISSSSS AHHHHHH
+					savedStoryArr.forEach(function (story){
+						$(".story-history").text(story);
+					});
+			});
 	});
+
 
 	//After 8 turns, this function runs
 	function gameOver() {
-	$("#timer, .writing, .greeting, #playerInput, #post-button").hide();
+	$("#timer, .writing, .greeting, #playerInput, #post-button").hide();  //FIX THIS greeting not hiding
+	$(".greeting").hide();
+	console.log("greeting is hidden");
 	$("#publishbutton").fadeIn(2500);
  
-}
+	}
 
 	//GREETING: "Press SpaceBar to begin"
 	$(".container").append( "<p class='greeting'>Press the spacebar to begin.</p>" );
@@ -53,7 +79,7 @@ $(document).ready(function() {
 		else if (counter === 0) {   //When time is up, disable form, alert the next player, reset clock, append greeting
 				$("#playerInput").attr("disabled", true);
 
-				$(".allDone").show().text("Next player");   
+				// $(".allDone").show().text("Next player");   
 				clearInterval(clock);
 				notStarted = true;
 
@@ -159,7 +185,9 @@ $(document).ready(function() {
 				$('#initial-input').children('input').val(" "); //The form clears after submission
 				$(".writing:even").addClass("turnPink"); // Colors will alternate between players
 				$(".writing:odd").css("color","black"); 
-				$(".greeting").fadeIn(400); // The spacebar greeting fades back in
+				$(".greeting").fadeIn(400,function(){
+					console.log('greeting fade in has finished ');
+				}); // The spacebar greeting fades back in
 				$("#turn1").hide(); 
 				
 				if (numMoves === 8) {			//After 8 turns, the game is over, call the gameOver() function
@@ -171,6 +199,13 @@ $(document).ready(function() {
 				notStarted = true; //when spacebar is pressed again 
 			}
 		});
+
+	//NAVAGATION BAR: Enable Popovers
+	$('#about-popover, #rules-popover').popover('toggle');
+	$('#about-popover, #rules-popover').popover('hide');
+
+
+
 
 
 });
